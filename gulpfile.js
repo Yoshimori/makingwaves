@@ -63,7 +63,7 @@ gulp.task('sass:prod', function() {
 
 gulp.task('sass:dev', function() {
   return gulp.src('app/scss/*.scss')//jak dodamy foldery to tutaj zmienic
-  .pipe(wait(1))
+  .pipe(wait(100))
   .pipe(sourcemaps.init())
   .pipe(sass({errLogToConsole: true, outputStyle: 'expanded'}).on('error', sass.logError))
   .pipe(autoprefixer({browsers: ["> 1%"]}))
@@ -88,7 +88,7 @@ gulp.task('svgopt', function() {
 
     gulp.src('app/images/*')
         .pipe(svgo())
-        .pipe(gulp.dest('dist/proba'));
+        .pipe(gulp.dest('dist/images'));
 });
 
 

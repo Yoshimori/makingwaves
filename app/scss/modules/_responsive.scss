@@ -1,0 +1,24 @@
+@media(max-width: 1200px) {
+	.text-logo {
+		display: none;
+	}
+}
+
+@media(max-width: 768px){
+	.text-logo {
+		display: none;
+	}
+	.logo {
+		margin-right: 0px;
+	    background-size: contain;
+	}
+	.ue-top {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img {
+			width: 320px;
+			height: 35px;
+		}
+	}
+}
