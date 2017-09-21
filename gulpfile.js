@@ -9,6 +9,8 @@ var cleanCSS = require('gulp-clean-css');
 var rename = require('gulp-rename');
 var svgo = require('gulp-svgo');
 
+var wait = require('gulp-wait');
+
 var jsSource = [
   "bower_components/jquery/dist/jquery.min.js",
   "app/js/*.js"
@@ -61,6 +63,7 @@ gulp.task('sass:prod', function() {
 
 gulp.task('sass:dev', function() {
   return gulp.src('app/scss/*.scss')//jak dodamy foldery to tutaj zmienic
+  .pipe(wait(1))
   .pipe(sourcemaps.init())
   .pipe(sass({errLogToConsole: true, outputStyle: 'expanded'}).on('error', sass.logError))
   .pipe(autoprefixer({browsers: ["> 1%"]}))
