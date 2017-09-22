@@ -81,7 +81,7 @@
 				                    <li><a href="#">Pielęgnacja paznokci</a></li>
 				                </ul>
 			                </li>
-			                <li><a href="">CERTYFIKATY, NAGRODY, PATENTY</a></li>
+			                <li><a href="certyfikaty-nagrody-patenty.html">CERTYFIKATY, NAGRODY, PATENTY</a></li>
 			                <li><a href="">KONTAKT</a></li>
 			                <li><a href="">GDZIE KUPIĆ</a></li>
 			                <li><a href="">BLOG</a></li>
@@ -111,11 +111,11 @@
 				<i class="ico-bg flower"></i> 
 			</div>
 			<div class="content-text-home">
-				<p>P. Farm. SULPHUR ZDRÓJ z Buska – Zdroju jest jedynym w Polsce producentem leków z naturalnych leczniczych kopalin: solanki siarczkowej i wodnego wyciągu borowinowego.
-				Unikalne leki przeciwreumatyczne: bals sulphur żel siarczkowy, maść borowinowa i reumogel żel borowinowy od ponad 20 lat skutecznie pomagają chorym. Leki na bazie naturalnych kopalin są stosowane nie tylko w chorobach reumatycznych. Łuszczycę i łojotokowe zapalenie skóry głowy leczy mineralny szampon siarczkowy ZDRÓJ. W zapaleniu przyzębia, tak zwanej paradontozie skuteczne są leki – pelogel żel borowinowy na dziąsła oraz pasta siarczkowa do zębów sulphodent.
-				Firma SULPHUR ZDRÓJ oferuje również produkty uzdrowiskowe, wytwarzane w standardzie leków. Cechuje je najwyższa jakość surowców farmaceutycznych, stała i kontrolowana ilość substancji czynnej oraz czystość mikrobiologiczna.
-				KURACJA SIARCZKOWA sulphur: buskie SPA siarczkowe do kąpieli, buska maska siarczkowa, hypoalergiczny żel siarczkowy do ciała, mineralne mydło siarczkowe, mineralny krem siarczkowy z wit. A, Mineralny szampon zdrojowy, Mineralna odżywka zdrojowa.
-				KURACJA BOROWINOWA sulphur: borowina SPA do kąpieli, borowina „plus” do okładów na ciało i twarz, hypoalergiczny żel borowinowy do ciała, masło borowinowe do ciała i masażu borowinowego.
+				<p>P. Farm. SULPHUR ZDRÓJ z Buska – Zdroju jest jedynym w Polsce producentem leków z naturalnych leczniczych kopalin: solanki siarczkowej i wodnego wyciągu borowinowego.<br>
+				Unikalne leki przeciwreumatyczne: bals sulphur żel siarczkowy, maść borowinowa i reumogel żel borowinowy od ponad 20 lat skutecznie pomagają chorym. Leki na bazie naturalnych kopalin są stosowane nie tylko w chorobach reumatycznych. Łuszczycę i łojotokowe zapalenie skóry głowy leczy mineralny szampon siarczkowy ZDRÓJ. W zapaleniu przyzębia, tak zwanej paradontozie skuteczne są leki – pelogel żel borowinowy na dziąsła oraz pasta siarczkowa do zębów sulphodent.<br>
+				Firma SULPHUR ZDRÓJ oferuje również produkty uzdrowiskowe, wytwarzane w standardzie leków. Cechuje je najwyższa jakość surowców farmaceutycznych, stała i kontrolowana ilość substancji czynnej oraz czystość mikrobiologiczna.<br>
+				KURACJA SIARCZKOWA sulphur: buskie SPA siarczkowe do kąpieli, buska maska siarczkowa, hypoalergiczny żel siarczkowy do ciała, mineralne mydło siarczkowe, mineralny krem siarczkowy z wit. A, Mineralny szampon zdrojowy, Mineralna odżywka zdrojowa.<br>
+				KURACJA BOROWINOWA sulphur: borowina SPA do kąpieli, borowina „plus” do okładów na ciało i twarz, hypoalergiczny żel borowinowy do ciała, masło borowinowe do ciała i masażu borowinowego.<br>
 				Jakość i skuteczność leków i produktów uzdrowiskowych SULPHUR ZDRÓJ jest gwarantowana certyfikatem GMP (Dobrej Praktyki Wytwarzania nr GIF-IW-400/0082_01_01/04/144/15).</p>
 			</div>
 		</div>
@@ -129,8 +129,8 @@
 					</div>
 				</div>
 				<div class="certifications">
-					<div class="first-certifications"></div>
-					<div class="second-certifications"></div>
+					<a class="first-certifications" href="images/certyfikaty-nagrody-09.jpg" data-lightbox="certyfikat-nagrody-09" data-title="certyfikat-nagrody-09"></a>
+					<a class="second-certifications" href="images/certyfikaty-nagrody-10.jpg" data-lightbox="certyfikat-nagrody-09" data-title="certyfikat-nagrody-09"></a>				
 				</div>
 			</div>
 		</section>
@@ -139,28 +139,29 @@
 			<div class="container-footer">
 				<div class="logo-footer">
 				</div>
+				<div class="ico-border"> 
+					<i class="ico-bg flower"></i> 
+				</div>
+			</div>	
+			<div class="copyright">
+				<p>Copyright © 2016 Sulphur Zdrój Exim. Wszelkie prawa zastrzeżone | Wdrożenie: <a href="http://siplex.pl" target="_blank">SIPLEX Studio</a></p>
 			</div>	
 		</footer>
+			
 
 	</div>
 
 	<script src="js/scripts.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+
 	<script>
-		$('ul.nav li.dropdown').hover(function() {
-		  $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(100);
-		}, function() {
-		  $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeOut(100);
-		});
+	var swiper = new Swiper('.swiper-container', {
+	    pagination: '.swiper-pagination',
+	    paginationClickable: true,
+	    nextButton: '.swiper-button-next',
+	    prevButton: '.swiper-button-prev',
+	    spaceBetween: 30
+	});
 	</script>
-	  <script>
-	    var swiper = new Swiper('.swiper-container', {
-	        pagination: '.swiper-pagination',
-	        paginationClickable: true,
-	        nextButton: '.swiper-button-next',
-	        prevButton: '.swiper-button-prev',
-	        spaceBetween: 30
-	    });
-    </script>
 </body>
 </html>

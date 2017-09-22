@@ -42,6 +42,15 @@ table {
 	border-spacing: 0;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+#lightbox {
+	display: none;
+}
+
 ///////////////////////
 
 .container-fluid {
@@ -125,10 +134,18 @@ nav {
 	background-color: #003778;
 }
 
+.navbar-toggle {
+	border-color:  #fff;
+	margin-right: 40px;
+		.icon-bar {
+			background: #fff;
+		}
+}
+
 // Swiper //
 
 .swiper-container {
-	height: 846px;
+	height: 546px;
 }
 
 .slide-1 {
@@ -201,6 +218,11 @@ nav {
 		}
 }
 
+.content-text-home {
+	width: 70%;
+	margin: 20px auto;
+}
+
 .container-certifications {
 	height: 647px;
 	width: 100%;
@@ -208,14 +230,17 @@ nav {
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: cover;
-    // 	&:before {
-		  // background-color: rgba(29,147,222,0.9);
-		  // content: '';
-		  // display: block;
-		  // height: 647px;
-		  // position: absolute;
-		  // width: 100%;
-    // 	}
+	position: relative;
+    	&:before {
+		  background-color: rgba(29,147,222,0.9);
+		  content: '';
+		  display: block;
+		  height: 647px;
+		  position: absolute;
+		  width: 100%;
+		  top: 0;
+		  left: 0;
+    	}
     h3 {
     	color: #fff;
     	font-size: 36px;
@@ -230,6 +255,18 @@ nav {
 	flex-direction: column;
 	padding-top: 40px;
 	padding-bottom: 20px;
+		.ico-border {
+    		&:after {
+    			background: #fff;
+    		}
+    		&:before {
+    			background: #fff;
+    		}
+    		.ico-bg {
+    		    background-position: right top;
+    		    opacity: 0.15;
+    		}
+    	}
 }
 
 .ico-border-cert {
@@ -239,6 +276,7 @@ nav {
 .certifications {
 	display: flex;
 	justify-content: space-around;
+
 }
 
 .first-certifications {
@@ -247,6 +285,7 @@ nav {
     background-size: cover;
     width: 300px;
     height: 450px;
+    z-index: 10;
 }
 
 .second-certifications {
@@ -255,16 +294,83 @@ nav {
     background-size: cover;
     width: 300px;
     height: 450px;
+    z-index: 10;
 }
+
+// CERTYFIKATY NAGRODY //
+
+.container-prize {
+	width: 80%;
+	min-height: 150px;
+	margin: 20px auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+		a {
+	    	border: 10px solid #ededed;
+			img {
+				height: 320px;
+				width: 232px;
+			}
+		}
+}
+
+.prizes-list {
+	a {
+		margin-bottom: 20px;
+		img {
+			width: 170px;
+			height: 170px;
+		}
+	}
+}
+
 
 // footer //
 
+footer {
+	position: relative;
+    background-color: #1d93de;
+	&:after {
+		content: "";
+	    background-image: url(../images/after.png);
+	    background-repeat: no-repeat;
+	    height: 172px;
+	    position: absolute;
+	    bottom: 0;
+	    right: 5px;
+	    width: 402px;
+	}
+}
+
 .container-footer {
     background-color: #1d93de;
-    width: 100%;
+    width: 70%;
     height: 200px;
-    margin-top: 20px;
+    margin: 20px auto 0px auto;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    	.ico-border {
+    		width: 100%;
+    		&:after {
+    			background: #fff;
+    			width: 47.5%;
+    		}
+    		&:before {
+    			background: #fff;
+    			width: 47%;
+    		}
+    		.ico-bg {
+    		    background-position: right top;
+    		    opacity: 0.15;
+    		}
+    	}
+    	
 }
+
 
 .logo-footer {
 	background-image: url(../images/logo-footer.png);
@@ -272,4 +378,17 @@ nav {
     width: 200px;
     height: 64px;
     margin: 0 auto;
+}
+
+.copyright {
+	width: 100%;
+	height:80px;
+	background-color: #003778;
+	display: flex;
+	align-items: center;
+		p {
+		    font-size: 13px;
+		    color: rgba(255, 255, 255, 0.32);
+		    margin-left: 15%;
+		}
 }

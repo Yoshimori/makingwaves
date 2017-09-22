@@ -21,4 +21,60 @@
 			height: 35px;
 		}
 	}
+	.container-footer {
+    	.ico-border {
+    		&:after {
+    			background: #fff;
+    			width: 40%;
+    		}
+    		&:before {
+    			background: #fff;
+    			width: 40%;
+    		}
+    		.ico-bg {
+    		    background-position: right top;
+    		}
+    	}    	
+	}
+	.copyright {
+		p {
+			margin-right: 15%;
+		}
+	}
+	.content-text-home {
+		width: 80%;
+	}
+	.container-certifications {
+		height: auto;
+		padding-bottom: 20px;
+			&:before {
+				height: 100%;
+			}
+	}
+	.certifications-title {
+		margin: 0 10%;
+	}
+	.certifications {
+		flex-direction: column;
+		align-items: center;
+	}
+	.second-certifications {
+		margin-top: 20px;
+	}
+	.container-prize {
+			a {
+		    	margin-top: 20px;
+			}
+	}
+	.welcome {
+		h2 {
+			margin: 0px 10%;
+		}
+	}
+	.container-prizes {
+		h2 {
+			margin: 20px 10%;
+		}
+	}
+
 }
