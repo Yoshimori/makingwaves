@@ -1,10 +1,16 @@
 //vendors// 
-
+@import "modules/_swiper.min.scss";
+@import "modules/_lightbox.min.scss";
 
 
 // modules //
 
-@import "modules/_lay.scss";
-@import "modules/_responsive.scss";
-@import "modules/_swiper.min.scss";
-@import "modules/_lightbox.min.scss";
+@import "modules/lay";
+@import "modules/reset";
+@import "modules/nav";
+@import "modules/custom-swiper";
+@import "modules/main";
+@import "modules/footer";
+@import "modules/certifications";
+@import "modules/article";
+@import "modules/responsive";

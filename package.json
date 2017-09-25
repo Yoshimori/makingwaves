@@ -24,5 +24,8 @@
     "gulp-sourcemaps": "^2.6.1",
     "gulp-svgo": "^1.2.5",
     "gulp-uglify": "^3.0.0"
+  },
+  "dependencies": {
+    "node-php-server": "^0.1.2"
   }
 }

@@ -8,13 +8,13 @@ var autoprefixer = require('gulp-autoprefixer');
 var cleanCSS = require('gulp-clean-css');
 var rename = require('gulp-rename');
 var svgo = require('gulp-svgo');
-
 var wait = require('gulp-wait');
 
 var jsSource = [
   "bower_components/jquery/dist/jquery.min.js",
   "bower_components/swiper/dist/js/swiper.min.js",
   "bower_components/lightbox/js/lightbox.js",
+  "bower_components/jquery.scrollTo/jquery.scrollTo.min.js",
   "app/js/*.js"
 ];
 
