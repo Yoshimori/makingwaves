@@ -1,0 +1,16 @@
+.articles-navigation {
+	li {
+		padding: 15px 0px;
+	    border-bottom: 1px solid #dbdbdb;
+		a {
+		    color: #1d93de;
+		    font-weight: bold;
+		    text-decoration: underline;
+		    text-transform: uppercase;
+		    font-size: 24px;
+		    	&:hover {
+		    		 text-decoration: none;
+		    	}
+		}
+	}
+}

@@ -42,15 +42,36 @@ nav {
 
 .nav { 
 	margin: 0 auto;
+
 	li {
 		a {
 			color: #fff;
+			transition: all 0.3s;
+			&:hover {
+				background-color: #1d93de;
+				color: #fff;
+			}
 		}
 	}
 }
 
+.navbar-nav>li>.dropdown-menu {
+	margin-top: -1px;
+}
+
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+	background-color: #1d93de;
+}
+
 .navbar {
 	margin-bottom: -1px;
+}
+
+.navbar-nav {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .dropdown-menu {
@@ -72,3 +93,4 @@ nav {
 			background: #fff;
 		}
 }
+
