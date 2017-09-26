@@ -14,9 +14,19 @@
 	.text-logo {
 		display: none;
 	}
+	.title-where-buy {
+		h2 {
+			width: 50%;
+		}
+	}
 }
 
 @media(max-width: 768px){
+	.title-where-buy {
+		h2 {
+			width: 100%;
+		}
+	}
 	.text-logo {
 		display: none;
 	}

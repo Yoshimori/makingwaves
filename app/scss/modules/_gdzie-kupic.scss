@@ -1,0 +1,50 @@
+.title-where-buy {
+	width: 100%;
+	margin-bottom: 50px;
+		h2 {
+			text-align: center;
+			width: 30%;
+			border: 1px solid #000;
+			padding: 5px;
+			margin: 0 auto;
+		}
+}
+
+.phone-buy {
+	color: #1d93de;
+}
+
+.buy-left-column {
+	border: 1px solid #000;
+	padding: 5px;
+	margin-bottom: 20px;
+		p {
+		    line-height: 24px;
+		}
+}
+
+.to-center {
+	text-align: center;
+}
+
+.shops-list {
+	li {
+		background-color: #3f51b5;
+		margin-bottom: 20px;
+		border-radius: 8px;
+		text-align: center;
+		padding: 8px 16px;
+		transition: all 0.3s;
+		cursor: pointer;
+			&:hover {
+				background-color: #1d93de;
+			}
+			a {
+				color: #fff;
+				display: block;
+					&:hover {
+						text-decoration: none;
+					}
+			}
+	}
+}

@@ -103,16 +103,40 @@
 						<p class="to-bold">Telefon dostępny przez 24 godziny na dobę w przypadku reklamacji i wycofań</p>
 						<p>tel: <a class="phone to-bold" href="tel:41378-78-93">41 378-78-93</a> </p>
 						<p>tel/fax: <a class="phone to-bold" href="tel:41378-78-93">41 378-48-88</a> </p><br>
-						<p class="to-bold">Zgłoszenie działań niepożądanych produktu leczniczego: tel/fax: 41-378-78-93</p>
+						<p class="to-bold">Zgłoszenie działań niepożądanych produktu leczniczego: tel/fax: 41-378-78-93</p><br>
+						<p><b>Formularz Kontaktowy</b></p>
+						<form autocomplete="off"> 
+							<div class="container-form">
+								<p>Imię i nazwisko (wymagane)</p>
+								<input class="text-input" type="text" name="name">
+								<p>Adres email (wymagane)</p>
+								<input class="text-input" type="text" name="email">
+								<p>Temat</p>
+								<input class="text-input" type="text" name="topic">
+								<p>Treść wiadomości </p>
+								<textarea name="message"></textarea>
+								 <input class="send-message" type="submit" value="Wyślij">
+							</div>
+						</form>
 					</div>
 					<div class="col-lg-6 col-sm-12">
 						<h3>Zakład produkcyjny</h3>
 						<p>28-100 Busko Zdrój ul. Bohaterów Warszawy 116a</p>
 						<p>tel/fax <a class="phone" href="tel:41378-78-93">41 378-78-93</a> email: <a href="mailto:kontakt@sulphur.com.pl">kontakt@sulphur.com.pl</a></p>
 						<p>Dyrektor Zakładu: <a href="mailto:beata.krawczyk@sulphur.com.pl">beata.krawczyk@sulphur.com.pl</a></p>
-						<p	>Kierownik Kontroli Jakości: <a href="mailto:grzegorz.mazur@sulphur.com.pl">grzegorz.mazur@sulphur.com.pl</a></p>	
+						<p>Kierownik Kontroli Jakości: <a href="mailto:grzegorz.mazur@sulphur.com.pl">grzegorz.mazur@sulphur.com.pl</a></p>	
 						<p>Szef Produkcji: <a href="mailto:barbara.zabieglo@sulphur.com.pl">barbara.zabieglo@sulphur.com.pl</a></p>
 						<p>Dział sprzedaży: <a href="mailto:mariola.szafraniec@sulphur.com.pl">mariola.szafraniec@sulphur.com.pl</a></p>
+					</div>
+				</div>
+				<div class="maps-container">
+					<div class="map-office">
+					 	<h2>Mapa dojazdowa – siedziba główna</h2>
+					 	<div id="main-map"></div>
+					</div>
+					<div class="map-bet">
+					 	<h2>Mapa dojazdowa – zakład produkcyjny</h2>
+					 	<div id="map-bet"></div>
 					</div>
 				</div>
 			</div>
@@ -137,8 +161,11 @@
 	<script src="js/scripts.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 
+	<script src="http://maps.google.com/maps/api/js?key=AIzaSyDU1T9Z3_00BrilXBWGOeSC9mZUMM7us4A&amp;sensor=false"></script>
+
 	<script>
-	   
+		myMap();
+	    myMapBet();
 	</script>
 </body>
 </html>
