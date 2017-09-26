@@ -1,3 +1,17 @@
+header {
+	position: relative;
+	&:after {
+		content: "";
+	    background-image: url(../images/header-bg.png);
+	    background-repeat: no-repeat;
+	    height: 140px;
+	    position: absolute;
+	    bottom: 0;
+	    right: 5px;
+	    width: 290px;
+	    z-index: 70000;
+	}
+}
 
 .logo {
 	background-image: url(../images/main-logo.png);
@@ -55,17 +69,17 @@ nav {
 	}
 }
 
-.navbar-nav>li>.dropdown-menu {
-	margin-top: -1px;
-}
+// .navbar-nav>li>.dropdown-menu {
+// 	margin-top: -1px;
+// }
 
 .nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
 	background-color: #1d93de;
 }
 
-.navbar {
-	margin-bottom: -1px;
-}
+// .navbar {
+// 	margin-bottom: -1px;
+// }
 
 .navbar-nav {
 	display: flex;
@@ -78,9 +92,9 @@ nav {
 	background-color: #003778;
 }
 
-.dropdown-submenu:hover>.dropdown-menu {
-    display: block;
-}
+// .dropdown-submenu:hover>.dropdown-menu {
+//     display: block;
+// }
 
 .navbar-header {
 	background-color: #003778;

@@ -15,6 +15,7 @@ var jsSource = [
   "bower_components/swiper/dist/js/swiper.min.js",
   "bower_components/lightbox/js/lightbox.js",
   "bower_components/jquery.scrollTo/jquery.scrollTo.min.js",
+  "bower_components/smartmenus-1.1.0/smartmenus-1.1.0/jquery.smartmenus.min.js",
   "app/js/*.js"
 ];
 

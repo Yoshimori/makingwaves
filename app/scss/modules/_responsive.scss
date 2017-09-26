@@ -22,6 +22,19 @@
 }
 
 @media(max-width: 768px){
+	header {
+		position: relative;
+		&:after {
+			display: none;
+		}
+	}
+	.navbar-nav {
+		display: block;
+	}
+
+	.navbar-nav {
+		flex-direction: column;
+	}
 	.title-where-buy {
 		h2 {
 			width: 100%;
