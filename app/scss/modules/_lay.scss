@@ -1,0 +1,54 @@
+.scroll-top { 
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	bottom: -120px;
+	right: 20px;
+	background-color: #c4c4c4;
+	z-index: 9999999;
+	border-radius: 10px;
+	transition: all 0.3s;
+	filter: alpha(opacity=50);
+	background-image: url(../images/up-arrow.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 50%;
+		&:hover {
+			background-color: #ababab;
+			cursor: pointer;
+		}
+}
+
+
+@font-face 
+{
+    font-family: Lato-regular;
+    src: url(../fonts/Lato/Lato-Regular.ttf);
+}
+
+@font-face 
+{
+    font-family: Lato-light;
+    src: url(../fonts/Lato/Lato-Light.ttf);
+}
+
+
+@font-face 
+{
+    font-family: Allura-regular;
+    src: url(../fonts/Allura/Allura-Regular.ttf);
+}
+
+$main-font-family: 'Lato-regular', sans-serif;
+$light-font-family: 'Lato-light', sans-serif;
+$allura-font-family: 'Allura-regular', sans-serif;
+
+body, p {
+	font-family: "Arial",sans-serif;
+	font-size: 14px;
+}
+
+a {
+	color: #1d93de;
+	font-weight: bold;
+}

@@ -1,9 +1,20 @@
+@media(max-width: 1450px) {
+	.content-pages {
+		width: 80%;
+	}
+	.container-footer {
+		width: 80%;
+	}
+	.copyright  {
+		p { 
+			margin-left: 10%;
+		}
+	}
+}
+
 @media(max-width: 1366px) {
 	.main-product{
 		width: 70%;
-	}
-	.content-pages {
-		width: 80%;
 	}
 	.container-other-products {
 		width: 28%;
@@ -22,6 +33,10 @@
 }
 
 @media(max-width: 768px){
+	.short-description {
+		position: relative;
+		right: 0;
+	}
 	header {
 		position: relative;
 		&:after {
@@ -103,12 +118,12 @@
 	}
 	.welcome {
 		h2 {
-			margin: 0px 10%;
+			margin: 20px 10% 0 10%;
 		}
 	}
 	.container-prizes {
 		h2 {
-			margin: 20px 10%;
+			margin: 20px 20px;
 		}
 	}
 	.content-pages {

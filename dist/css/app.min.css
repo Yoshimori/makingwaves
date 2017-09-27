@@ -743,6 +743,53 @@ html, body {
   padding-right: 0px;
 }
 
+.scroll-top {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: -120px;
+  right: 20px;
+  background-color: #c4c4c4;
+  z-index: 9999999;
+  border-radius: 10px;
+  transition: all 0.3s;
+  filter: alpha(opacity=50);
+  background-image: url(../images/up-arrow.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+}
+
+.scroll-top:hover {
+  background-color: #ababab;
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: Lato-regular;
+  src: url(../fonts/Lato/Lato-Regular.ttf);
+}
+
+@font-face {
+  font-family: Lato-light;
+  src: url(../fonts/Lato/Lato-Light.ttf);
+}
+
+@font-face {
+  font-family: Allura-regular;
+  src: url(../fonts/Allura/Allura-Regular.ttf);
+}
+
+body, p {
+  font-family: "Arial",sans-serif;
+  font-size: 14px;
+}
+
+a {
+  color: #1d93de;
+  font-weight: bold;
+}
+
 header {
   position: relative;
 }
@@ -756,7 +803,10 @@ header:after {
   bottom: 0;
   right: 5px;
   width: 290px;
-  z-index: 70000;
+}
+
+.navbar-static-top {
+  z-index: auto;
 }
 
 .logo {
@@ -774,6 +824,8 @@ header:after {
 .text-logo h2 {
   color: #fff;
   font-size: 24px;
+  line-height: 36px;
+  font-family: "Lato-regular", sans-serif;
 }
 
 .ue-top {
@@ -791,6 +843,8 @@ header:after {
 nav li {
   cursor: pointer;
   font-size: 13px;
+  font-family: "Arial",sans-serif;
+  z-index: 2;
 }
 
 .menu-container {
@@ -805,6 +859,8 @@ nav li {
 .nav li a {
   color: #fff;
   transition: all 0.3s;
+  font-size: 13px;
+  font-weight: normal;
 }
 
 .nav li a:hover {
@@ -843,8 +899,20 @@ nav li {
   background: #fff;
 }
 
+.buy {
+  background-color: blue;
+}
+
+.repair-subMenu {
+  margin-top: -1px !important;
+}
+
 .swiper-container {
-  height: 546px;
+  height: 39.7vw;
+}
+
+.section-swiper {
+  margin-top: -20px;
 }
 
 .slide-1 {
@@ -882,7 +950,7 @@ nav li {
 
 .page-title h1 {
   background-color: #fff;
-  z-index: 2;
+  z-index: 1;
   padding: 0 20px;
 }
 
@@ -909,6 +977,10 @@ nav li {
   padding: 5px 0;
 }
 
+.text-about-us {
+  line-height: 24px;
+}
+
 footer {
   position: relative;
   background-color: #1d93de;
@@ -927,7 +999,7 @@ footer:after {
 
 .container-footer {
   background-color: #1d93de;
-  width: 70%;
+  width: 60%;
   height: 200px;
   margin: 20px auto 0px auto;
   padding: 20px 0px;
@@ -981,7 +1053,18 @@ footer:after {
 .copyright p {
   font-size: 13px;
   color: rgba(255, 255, 255, 0.32);
-  margin-left: 15%;
+  margin-left: 20%;
+}
+
+.copyright a {
+  color: rgba(255, 255, 255, 0.32);
+  font-style: italic;
+  transition: all 0.3s;
+}
+
+.copyright a:hover {
+  color: #fff;
+  text-decoration: none;
 }
 
 .ico-border {
@@ -1042,10 +1125,11 @@ footer:after {
 .welcome h2 {
   font-size: 24px;
   margin: 15px 0px;
+  font-family: "Lato-light", sans-serif;
 }
 
 .content-text-home {
-  width: 70%;
+  width: 60%;
   margin: 20px auto;
 }
 
@@ -1074,6 +1158,7 @@ footer:after {
   color: #fff;
   font-size: 36px;
   z-index: 10;
+  font-family: "Lato-light", sans-serif;
 }
 
 .certifications-title {
@@ -1091,11 +1176,11 @@ footer:after {
 }
 
 .certifications-title .ico-border:after {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .certifications-title .ico-border:before {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .certifications-title .ico-border .ico-bg {
@@ -1111,6 +1196,9 @@ footer:after {
   display: -webkit-box;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  width: 70%;
+  margin: 0 auto;
 }
 
 .first-certifications {
@@ -1150,8 +1238,13 @@ footer:after {
   width: 232px;
 }
 
+.prizes-list {
+  width: 50%;
+}
+
 .prizes-list a {
   margin-bottom: 20px;
+  margin-right: 20px;
 }
 
 .prizes-list a img {
@@ -1181,6 +1274,11 @@ footer:after {
   margin: 0 auto;
 }
 
+.content-pages p {
+  line-height: 24px;
+  font-size: 14px;
+}
+
 .art-navigation {
   display: -webkit-box;
   display: flex;
@@ -1193,6 +1291,7 @@ footer:after {
   border-top: 3px solid #1d93de;
   padding: 5px;
   margin-bottom: 10px;
+  z-index: 1;
 }
 
 .art-navigation li:first-child {
@@ -1218,6 +1317,7 @@ footer:after {
 .content-article .img-article {
   width: 60%;
   float: left;
+  margin: 0px 15px 15px 0px;
 }
 
 .content-article .img-article img {
@@ -1237,6 +1337,7 @@ footer:after {
 
 .main-product {
   width: 60%;
+  z-index: 1;
 }
 
 .container-product {
@@ -1257,7 +1358,7 @@ footer:after {
   text-decoration: underline;
   padding: 10px 10px;
   background: #ededed;
-  border-top: 3px solid #d9d9d9;
+  border-top: 3px solid #808080;
   border-left: 1px solid #d9d9d9;
   border-right: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
@@ -1278,10 +1379,16 @@ footer:after {
   display: -webkit-box;
   display: flex;
   min-height: 250px;
+  position: relative;
 }
 
 .photo-product img {
   width: 100%;
+}
+
+.short-description {
+  position: absolute;
+  right: 50px;
 }
 
 .short-description h2 {
@@ -1300,6 +1407,7 @@ footer:after {
   padding-left: 30px;
   text-indent: -.7em;
   margin-bottom: 10px;
+  line-height: 18px;
 }
 
 .short-description ul li:before {
@@ -1334,11 +1442,13 @@ footer:after {
   font-size: 24px;
   text-align: center;
   margin-bottom: 10px;
+  font-family: "Lato-light",sans-serif;
 }
 
 .title-click-more {
   margin: 10px 0px 20px 0px;
   font-size: 27px;
+  font-family: "Allura-regular",sans-serif;
 }
 
 .photos-other-products {
@@ -1368,6 +1478,7 @@ footer:after {
 .bottom-product {
   text-align: center;
   margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 .list-bottom-product {
@@ -1378,7 +1489,7 @@ footer:after {
   -webkit-box-align: center;
           align-items: center;
   flex-wrap: wrap;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -1674,12 +1785,21 @@ footer:after {
   right: auto;
 }
 
+@media (max-width: 1450px) {
+  .content-pages {
+    width: 80%;
+  }
+  .container-footer {
+    width: 80%;
+  }
+  .copyright p {
+    margin-left: 10%;
+  }
+}
+
 @media (max-width: 1366px) {
   .main-product {
     width: 70%;
-  }
-  .content-pages {
-    width: 80%;
   }
   .container-other-products {
     width: 28%;
@@ -1696,6 +1816,10 @@ footer:after {
 }
 
 @media (max-width: 768px) {
+  .short-description {
+    position: relative;
+    right: 0;
+  }
   header {
     position: relative;
   }
@@ -1773,10 +1897,10 @@ footer:after {
     margin-top: 20px;
   }
   .welcome h2 {
-    margin: 0px 10%;
+    margin: 20px 10% 0 10%;
   }
   .container-prizes h2 {
-    margin: 20px 10%;
+    margin: 20px 20px;
   }
   .content-pages {
     width: 80%;

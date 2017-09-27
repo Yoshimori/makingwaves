@@ -9,8 +9,11 @@ header {
 	    bottom: 0;
 	    right: 5px;
 	    width: 290px;
-	    z-index: 70000;
 	}
+}
+
+.navbar-static-top {
+	z-index: auto;
 }
 
 .logo {
@@ -28,6 +31,8 @@ header {
 	h2 {
 		color: #fff;
 		font-size: 24px;
+		line-height: 36px;
+		font-family: $main-font-family;
 	}
 }
 
@@ -46,6 +51,8 @@ nav {
 	li {
 		cursor: pointer;
 		font-size: 13px;
+		font-family: "Arial",sans-serif;
+		z-index: 2;
 	}
 }
 
@@ -56,11 +63,12 @@ nav {
 
 .nav { 
 	margin: 0 auto;
-
 	li {
 		a {
 			color: #fff;
 			transition: all 0.3s;
+			font-size: 13px;
+			font-weight: normal;
 			&:hover {
 				background-color: #1d93de;
 				color: #fff;
@@ -69,17 +77,9 @@ nav {
 	}
 }
 
-// .navbar-nav>li>.dropdown-menu {
-// 	margin-top: -1px;
-// }
-
 .nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
 	background-color: #1d93de;
 }
-
-// .navbar {
-// 	margin-bottom: -1px;
-// }
 
 .navbar-nav {
 	display: flex;
@@ -91,10 +91,6 @@ nav {
 .dropdown-menu {
 	background-color: #003778;
 }
-
-// .dropdown-submenu:hover>.dropdown-menu {
-//     display: block;
-// }
 
 .navbar-header {
 	background-color: #003778;
@@ -108,3 +104,10 @@ nav {
 		}
 }
 
+.buy {
+    background-color: blue;
+}
+
+.repair-subMenu {
+	margin-top: -1px !important;
+}

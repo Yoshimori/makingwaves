@@ -1,6 +1,10 @@
 .content-pages {
 	width: 60%;
 	margin: 0 auto;
+		p {
+			line-height: 24px;
+			font-size: 14px;
+		}
 }
 
 .art-navigation {
@@ -12,6 +16,7 @@
 	    border-top: 3px solid #1d93de;
 	    padding: 5px;
 	    margin-bottom: 10px;
+	    z-index: 1;
     	&:first-child {
 			background-color: #fff;
 			border-top: none;
@@ -35,6 +40,7 @@
 		.img-article {
 			width: 60%;
 			float: left;
+			margin: 0px 15px 15px 0px;
 				img {
 					width: 100%;
 				}
