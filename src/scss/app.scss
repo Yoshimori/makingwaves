@@ -1,21 +1,47 @@
-//vendors// 
-@import "modules/_swiper.min.scss";
-@import "modules/_lightbox.min.scss";
+
+@import "settings";
+
+// ============================================
+// Vendor
+// ============================================
+
+@import "Swiper/dist/css/swiper";
 
 
-// modules //
+// ============================================
+// Base
+// ============================================
 
-@import "modules/reset";
-@import "modules/lay";
-@import "modules/nav";
-@import "modules/custom-swiper";
-@import "modules/main";
-@import "modules/footer";
-@import "modules/certifications";
-@import "modules/list-article";
-@import "modules/article";
-@import "modules/single-produkt";
-@import "modules/contact";
-@import "modules/gdzie-kupic";
-@import "modules/jquery.smartmenus.bootstrap.scss";
-@import "modules/responsive";
+@import "Base/reset";
+
+
+
+// ============================================
+// Layout
+// ============================================
+
+//@import "Layout/smth";
+
+
+
+// ============================================
+// Modules
+// ============================================
+
+//@import "Module/smth";
+
+
+
+// ============================================
+// State
+// ============================================
+
+//@import "State/smth";
+
+
+
+// ============================================
+// Shame
+// ============================================
+
+// @import "Shame/smth";

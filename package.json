@@ -13,8 +13,10 @@
   "author": "kruczek",
   "license": "ISC",
   "devDependencies": {
+    "@types/jquery": "^3.2.13",
     "bower": "^1.8.2",
     "browser-sync": "^2.18.13",
+    "browserify": "^14.4.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-clean-css": "^3.9.0",
@@ -23,8 +25,13 @@
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1",
     "gulp-svgo": "^1.2.5",
+    "gulp-typescript": "^3.2.2",
     "gulp-uglify": "^3.0.0",
-    "gulp-wait": "0.0.2"
+    "gulp-wait": "0.0.2",
+    "tsify": "^3.0.3",
+    "typescript": "^2.5.3",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
     "node-php-server": "^0.1.2"
