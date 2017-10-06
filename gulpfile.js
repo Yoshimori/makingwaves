@@ -12,11 +12,7 @@ var wait = require('gulp-wait');
 
 var jsSource = [
   "bower_components/jquery/dist/jquery.min.js",
-  "bower_components/swiper/dist/js/swiper.min.js",
-  "bower_components/lightbox/js/lightbox.js",
-  "bower_components/jquery.scrollTo/jquery.scrollTo.min.js",
-  "bower_components/smartmenus-1.1.0/smartmenus-1.1.0/jquery.smartmenus.min.js",
-  "app/js/*.js"
+  "src/js/*.js"
 ];
 
 // ============================================
@@ -28,7 +24,7 @@ var jsSource = [
 gulp.task('js:dev', function() {
     return gulp.src(jsSource)
         .pipe(sourcemaps.init()) //odpalam generowanie sourcemapy
-        .pipe(concat('scripts.js')) //łaczę pliki
+        .pipe(concat('app.js')) //łaczę pliki
         .pipe(rename({suffix: '.min'})) //zmieniam nazwę
         .pipe(sourcemaps.write('./maps')) //tworzę sourcemapę
         .pipe(gulp.dest('dist/js')) //wszystko zapisuję w dist/js
@@ -38,9 +34,9 @@ gulp.task('js:dev', function() {
 // Minify JS
 
 gulp.task('js:prod', function() {
-    return gulp.src('app/js/*.js')
+    return gulp.src('src/js/*.js')
         .pipe(sourcemaps.init())
-        .pipe(concat('scripts.js'))
+        .pipe(concat('app.js'))
         .pipe(uglify())
         .pipe(rename({suffix: '.min'}))
         .pipe(sourcemaps.write('./maps'))
@@ -53,7 +49,7 @@ gulp.task('js:prod', function() {
 // ============================================
 
 gulp.task('sass:prod', function() {
-  return gulp.src('app/scss/*.scss')//jak dodamy foldery to tutaj zmienic
+  return gulp.src('src/scss/*.scss')//jak dodamy foldery to tutaj zmienic
   .pipe(sourcemaps.init())
   .pipe(sass({errLogToConsole: true, outputStyle: 'expanded'}).on('error', sass.logError))
   .pipe(autoprefixer({browsers: ["> 1%"]}))
@@ -65,7 +61,7 @@ gulp.task('sass:prod', function() {
 });
 
 gulp.task('sass:dev', function() {
-  return gulp.src('app/scss/*.scss')//jak dodamy foldery to tutaj zmienic
+  return gulp.src('src/scss/*.scss')//jak dodamy foldery to tutaj zmienic
   .pipe(wait(100))
   .pipe(sourcemaps.init())
   .pipe(sass({errLogToConsole: true, outputStyle: 'expanded'}).on('error', sass.logError))
@@ -82,20 +78,23 @@ gulp.task('sass:dev', function() {
 // ============================================
 
 gulp.task('copy-html-files', function () {  // kopiowanie html
-    return gulp.src('./app/*.html') // stream source
+    return gulp.src('./src/*.html') // stream source
     .pipe(gulp.dest('./dist')) // copy to dist/views
     .pipe(browserSync.stream({match: '**/*.html'}))
 });
 
 gulp.task('svgopt', function() {
 
-    gulp.src('app/images/*')
+    gulp.src('assets/images/*')
         .pipe(svgo())
         .pipe(gulp.dest('dist/images'));
 });
 
 
 // ============================================
+// BROWSER SYNC
+// ============================================
+
 gulp.task('browserSync', function (){
   var files = [
       '*.html',
@@ -109,17 +108,21 @@ gulp.task('browserSync', function (){
   });
 });
 
+// ============================================
+//  WATCH
+// ============================================
+
 gulp.task('watch:prod', function() {
-    gulp.watch('app/js/*.js', ['js:prod']);
-    gulp.watch('app/scss/**/*.scss', ['sass:prod']);
-    gulp.watch('app/*.html', ['copy-html-files']);
+    gulp.watch('src/js/*.js', ['js:prod']);
+    gulp.watch('src/scss/**/*.scss', ['sass:prod']);
+    gulp.watch('src/*.html', ['copy-html-files']);
 });
 
 gulp.task('watch:dev', function() {
-  gulp.watch('app/js/*.js', ['js:dev']);
-  gulp.watch('app/scss/**/*.scss', ['sass:dev']);
-  gulp.watch('app/*.html', ['copy-html-files']);
-  gulp.watch('./app/html/**/*.html',['fileinclude']);
+  gulp.watch('src/js/*.js', ['js:dev']);
+  gulp.watch('src/scss/**/*.scss', ['sass:dev']);
+  gulp.watch('src/*.html', ['copy-html-files']);
+  gulp.watch('./src/html/**/*.html',['fileinclude']);
 });
 
 gulp.task('dev', function() {

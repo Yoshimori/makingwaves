@@ -23,7 +23,8 @@
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1",
     "gulp-svgo": "^1.2.5",
-    "gulp-uglify": "^3.0.0"
+    "gulp-uglify": "^3.0.0",
+    "gulp-wait": "0.0.2"
   },
   "dependencies": {
     "node-php-server": "^0.1.2"
