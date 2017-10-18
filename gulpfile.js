@@ -50,6 +50,7 @@ gulp.task('ts:dev', function() {
     })
     .plugin(tsify)
     .bundle()
+    .on('error', swallowError)
     .pipe(source('main.min.js'))
     .pipe(buffer())
     .pipe(sourcemaps.init({loadMaps: true}))
