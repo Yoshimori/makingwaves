@@ -54,7 +54,7 @@ gulp.task('ts:dev', function() {
     .pipe(source('main.min.js'))
     .pipe(buffer())
     .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest("dist/js"))
     .pipe(browserSync.stream());
