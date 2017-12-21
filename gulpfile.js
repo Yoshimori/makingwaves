@@ -26,6 +26,7 @@ var tsSource = [
   "src/js/*.js"
 ];
 
+
 var scssSource = [
     "src/scss/*.scss"
 ]
@@ -33,6 +34,8 @@ var scssSource = [
 var scssIncludePaths = [
     "./bower_components"
 ]
+
+
 
 // ============================================
 // TS tasks
