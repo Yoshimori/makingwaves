@@ -17,14 +17,6 @@ var ts = require("gulp-typescript");
 var tsProject = ts.createProject("tsconfig.json");
 var buffer = require('vinyl-buffer');
 
-var tsSource = [
-    "src/ts/*.ts"
-];
-
-var tsSource = [
-  "bower_components/jquery/dist/jquery.min.js",
-  "src/js/*.js"
-];
 
 
 var scssSource = [
@@ -35,52 +27,41 @@ var scssIncludePaths = [
     "./bower_components"
 ]
 
-// ============================================
-// TS tasks
-// ============================================
-
-// Concatenate TS
-
-gulp.task('ts:dev', function() {
-    return browserify({
-        basedir: '.',
-        debug: true,
-        entries: ['src/ts/main.ts'],
-        cache: {},
-        packageCache: {}
-    })
-    .plugin(tsify)
-    .bundle()
-    .on('error', swallowError)
-    .pipe(source('main.min.js'))
-    .pipe(buffer())
-    .pipe(sourcemaps.init({loadMaps: true}))
-    // .pipe(uglify())
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest("dist/js"))
-    .pipe(browserSync.stream());
-});
-
-// Minify TS
-
-gulp.task('ts:prod', function() {
-    return browserify({
-        basedir: '.',
-        debug: true,
-        entries: ['src/ts/main.ts'],
-        cache: {},
-        packageCache: {}
-    })
-    .plugin(tsify)
-    .bundle()
-    .pipe(source('main.min.js'))
-    .pipe(buffer())
-    .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(uglify())
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest("dist/js"))
-    .pipe(browserSync.stream());
-});
+var jsSource = [
+    "bower_components/jquery/dist/jquery.min.js",
+    "src/js/lib/greets.js",
+    "src/js/main.js"
+  ];
+  
+  // ============================================
+  // JS tasks
+  // ============================================
+  
+  // Concatenate JS
+  
+  gulp.task('js:dev', function() {
+      return gulp.src(jsSource)
+          .pipe(sourcemaps.init()) //odpalam generowanie sourcemapy
+          .pipe(concat('main.js')) //łaczę pliki
+          .pipe(rename({suffix: '.min'})) //zmieniam nazwę
+          .pipe(sourcemaps.write('./maps')) //tworzę sourcemapę
+          .pipe(gulp.dest('dist/js')) //wszystko zapisuję w dist/js
+          .pipe(browserSync.stream())
+  });
+  
+  // Minify JS
+  
+  gulp.task('js:prod', function() {
+      return gulp.src(jsSource)
+          .pipe(sourcemaps.init())
+          .pipe(concat('main.js'))
+          .pipe(uglify())
+          .pipe(rename({suffix: '.min'}))
+          .pipe(sourcemaps.write('./maps'))
+          .pipe(gulp.dest('dist/js'))
+          .pipe(browserSync.stream())
+  });
+  
 
 // ============================================
 // SCSS tasks
@@ -152,20 +133,20 @@ gulp.task('ts:prod', function() {
 // ============================================
 
     gulp.task('watch:prod', function() {
-        gulp.watch('src/ts/**/*.ts', ['ts:prod']).on('error', swallowError);
+        gulp.watch('src/js/**/*.js', ['ts:prod']).on('error', swallowError);
         gulp.watch('src/scss/**/*.scss', ['sass:prod']).on('error', swallowError);
         gulp.watch('src/*.html', ['copy-html-files']).on('error', swallowError);
     });
 
     gulp.task('watch:dev', function() {
-    gulp.watch('src/ts/**/*.ts', ['ts:dev']).on('error', swallowError);
+    gulp.watch('src/js/**/*.js', ['js:dev']).on('error', swallowError);
     gulp.watch('src/scss/**/*.scss', ['sass:dev']).on('error', swallowError);
     gulp.watch('src/*.html', ['copy-html-files']).on('error', swallowError);
     gulp.watch('./src/html/**/*.html',['fileinclude']).on('error', swallowError);
     });
 
     gulp.task('dev', function() {
-    gulp.start('sass:dev', 'ts:dev', 'copy-html-files', 'watch:dev');
+    gulp.start('sass:dev', 'js:dev', 'copy-html-files', 'watch:dev');
     });
 
     gulp.task('prod', function() {
