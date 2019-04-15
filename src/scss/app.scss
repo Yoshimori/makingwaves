@@ -1,19 +1,19 @@
 
 @import "settings";
+@import "main";
 
 // ============================================
 // Vendor
 // ============================================
 
-@import "Swiper/dist/css/swiper";
-
+@import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import '../../node_modules/ekko-lightbox/dist/ekko-lightbox.css';
 
 // ============================================
-// Base
 // ============================================
 
-@import "Base/reset";
-
+// @import "Base/reset";
+@import "Base/main";
 
 
 // ============================================
@@ -22,7 +22,17 @@
 
 //@import "Layout/smth";
 
+@import "Layout/footer/main";
+@import "Layout/header/main";
 
+// ============================================
+// Components
+// ============================================
+
+//@import "Components/smth";
+@import "./components/navigation/mainNav";
+@import "./components/carousel/main";
+@import "./components/video/play";
 
 // ============================================
 // Modules

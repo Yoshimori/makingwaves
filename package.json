@@ -1,5 +1,5 @@
 {
-  "name": "nykiel",
+  "name": "smoothies",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://p.kruczek@192.168.2.204:33322/volume1/Git/Nykiel"
+    "url": "https://github.com/Yoshimori/makingwaves.git"
   },
   "author": "kruczek",
   "license": "ISC",
@@ -34,6 +34,9 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
-    "node-php-server": "^0.1.2"
+    "bootstrap": "^4.3.1",
+    "ekko-lightbox": "^5.3.0",
+    "node-php-server": "^0.1.2",
+    "popper.js": "^1.15.0"
   }
 }
